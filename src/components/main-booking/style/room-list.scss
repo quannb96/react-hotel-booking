@@ -1,0 +1,151 @@
+.rooms {
+  width: 100%;
+  height: 100%;
+}
+.room {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  box-shadow: 0 7px 30px -10px #96aab480;
+}
+.room-type-carousel {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  .room-img-carousel {
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.room-type-list {
+  display: flex;
+  padding-left: 2px;
+}
+.room-type-list li {
+  list-style-type: none;
+  padding-right: 10px;
+}
+.swiper-slide {
+  background: #fff;
+  text-align: center;
+}
+.room-type-intro {
+  text-align: left;
+  padding: 10px;
+}
+.room-type-heading {
+  color: #383b3e;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-right: 4px;
+  line-height: 24px;
+}
+.ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+  p {
+    text-align: justify;
+  }
+}
+
+.room-rate-list {
+  text-align: left;
+  min-height: 80px;
+  padding: 6px 16px 0;
+  font-size: 1rem;
+  display: block;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+}
+.room-rate-name {
+  color: #383b3e;
+  font-size: 0.875em;
+  line-height: 1.22;
+  font-weight: 400;
+  clear: both;
+  display: block;
+  margin: 10px 0;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.room-rate-name:hover {
+  color: #007dbb;
+}
+.rate-price-select {
+  text-align: right;
+  justify-content: end;
+}
+.rate-select-btn {
+  line-height: 36px;
+  padding: 3px 24px;
+  border-radius: 4px;
+  transition: all 0.1s;
+  white-space: nowrap;
+  border: 2px solid;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 5px 0;
+  background: #066a92;
+  color: #fff;
+  cursor: pointer;
+}
+.rate-select-btn:hover {
+  background: #005e84;
+}
+.room-rate-list p {
+  margin-bottom: 0 !important;
+}
+.room-img-carousel {
+  .swiper-button-prev,
+  .swiper-button-next {
+    opacity: 0.4;
+    color: #363636;
+    background: #fff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 24px;
+  }
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: #fff;
+    color: #000;
+    opacity: 1;
+  }
+  .swiper-button-prev,
+  .swiper-button-prev:hover {
+    left: 16px;
+    z-index: 2;
+  }
+  .swiper-button-next,
+  .swiper-button-next:hover {
+    right: 16px;
+    z-index: 2;
+  }
+}

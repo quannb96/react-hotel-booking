@@ -1,0 +1,123 @@
+$themeColor: #026082;
+$bookHeader: #00729c;
+$labelColor: #b6b6b6;
+
+.payment-page {
+  background-color: #f2f7f9;
+  height: 100vh;
+  .pay-header {
+    color: #fff;
+    background-color: $bookHeader;
+    .pay-account {
+      height: 100%;
+      text-align: center;
+      .pay-account-name {
+        font-size: 20px;
+        margin: 5px;
+      }
+    }
+    .ant-row-cente {
+      align-items: center;
+    }
+    .text-logo {
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+    }
+    .pay-btn-logout {
+      padding: 0px 8px;
+      border-radius: 4px;
+      transition: all 0.1s;
+      white-space: nowrap;
+      border: 2px solid;
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: 5px 10px;
+      background: #fff;
+      color: #004862;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+        background-color: #004a65;
+      }
+    }
+    .anticon svg {
+      font-size: 40px;
+      color: #fff;
+      &:hover {
+        background-color: #0296cc;
+      }
+    }
+  }
+  .btn-booking-section {
+    a {
+      text-decoration: none;
+      text-align: centerS;
+    }
+  }
+}
+.pay-main {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.pay-wrapper {
+  width: 100%;
+}
+.pay-form,
+.pay-booking-view {
+  padding: 0 8px;
+  border-radius: 4px;
+  line-height: 1.618;
+}
+.pay-step {
+  .ant-steps {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 60rem;
+    .anticon svg {
+      padding-bottom: 5px;
+    }
+  }
+  .steps-action {
+    margin: 0 auto;
+    max-width: 60rem;
+  }
+}
+.ant-form-item-label {
+  overflow: none;
+}
+.pay-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  img {
+    height: 25px;
+  }
+}
+.ant-radio-group,
+.ant-space.ant-space-vertical {
+  width: 100%;
+}
+.ant-radio-wrapper.ant-radio-wrapper-checked,
+.ant-radio-wrapper.ant-radio-wrapper-checked > span {
+  width: 100%;
+}
+.ant-radio.ant-radio-checked {
+  width: 16px !important;
+}
+.booking-success {
+  .anticon-check {
+    color: #00c900;
+  }
+}
+.pay-method .ant-collapse-header-text {
+  font-size: 16px !important;
+}
