@@ -1,0 +1,13 @@
+.admin-page {
+  width: 100%;
+  h1,
+  h3 {
+    margin: 50px 500px;
+  }
+  h3 {
+    color: green;
+  }
+  h3:hover {
+    color: red;
+  }
+}

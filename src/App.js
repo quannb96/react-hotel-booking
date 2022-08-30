@@ -6,10 +6,10 @@ import UserRegister from "./components/user-login-register/UserRegister";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import HomePage from "./components/home/HomePage";
 import { DataProvider } from "./providers/DataContext";
-import AdminPage from "./admin-src/components/main-layout/HomePage";
 import PaymentPage from "./components/payment-page/PaymentPage";
 import { BookingHistory } from "./components/booking-history/BookingHistory";
 import { ProtectedRouteAdmin } from "./components/ProtectedRouteAdmin";
+import { AdminPage } from "./components/admin/AdminPage";
 
 function App() {
   return (

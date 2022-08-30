@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { CustomerContext } from "../../../providers/CustomerContext";
 import RoomOrdered from "./RoomOrdered";
 import { dateString, formatPrice } from "../../../utils";
-import { useEffect } from "react";
 
 const { Panel } = Collapse;
 

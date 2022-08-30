@@ -8,7 +8,7 @@ import { logoutAction } from "../../stores/slices/user.slice";
 import "../main-booking/style/book-header.scss";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faGears } from "@fortawesome/free-solid-svg-icons";
 
 export const BookHeader = () => {
   const userInfo = useSelector((state) => state.user.userInfoState);
@@ -19,9 +19,10 @@ export const BookHeader = () => {
       case "1":
         break;
       case "2":
+        break;
+      case "3":
         dispatch(logoutAction());
         break;
-
       default:
         break;
     }
@@ -33,15 +34,27 @@ export const BookHeader = () => {
       items={[
         {
           label: (
-            <NavLink to="/bookinghistory">
-              <button className="pay-btn-logout">Booking History</button>
+            <NavLink to="/admin">
+              {userInfo.data !== null && userInfo.data.role === "admin" && (
+                <Button className="bookNowButton">
+                  <FontAwesomeIcon icon={faGears} /> &nbsp; Admin
+                </Button>
+              )}
             </NavLink>
           ),
           key: "1",
         },
         {
-          label: <button className="pay-btn-logout">Logout</button>,
+          label: (
+            <NavLink to="/bookinghistory">
+              <button className="pay-btn-logout">Booking History</button>
+            </NavLink>
+          ),
           key: "2",
+        },
+        {
+          label: <button className="pay-btn-logout">Logout</button>,
+          key: "3",
         },
       ]}
     />

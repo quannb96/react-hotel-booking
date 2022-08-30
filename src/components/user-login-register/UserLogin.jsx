@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Form, Input, Col, Row, Checkbox } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Navigate } from "react-router";
 import "./style/user-register-login.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useSelector, useDispatch } from "react-redux";
 import { loginAction } from "../../stores/slices/user.slice";
+import { CustomerContext } from "../../providers/CustomerContext";
 
 export default function UserLogin() {
+  const { orderInfo } = useContext(CustomerContext);
   const userInfo = useSelector((state) => state.user.userInfoState);
   const dispatch = useDispatch();
 
@@ -102,7 +104,7 @@ export default function UserLogin() {
                     <Form.Item name="remember" valuePropName="checked">
                       <Checkbox>Remember me</Checkbox>
                     </Form.Item>
-                    <a href="">Forgot password</a>
+                    <p>Forgot password</p>
                   </Row>
                 </Col>
 

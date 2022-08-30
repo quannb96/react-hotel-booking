@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutAction } from "../../stores/slices/user.slice";
 import "../main-booking/style/book-header.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faGears } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const userInfo = useSelector((state) => state.user.userInfoState);
@@ -26,9 +26,10 @@ export default function Header() {
       case "1":
         break;
       case "2":
+        break;
+      case "3":
         dispatch(logoutAction());
         break;
-
       default:
         break;
     }
@@ -40,15 +41,27 @@ export default function Header() {
       items={[
         {
           label: (
-            <NavLink to="/bookinghistory">
-              <button className="pay-btn-logout">Booking History</button>
+            <NavLink to="/admin">
+              {userInfo.data !== null && userInfo.data.role === "admin" && (
+                <Button className="bookNowButton">
+                  <FontAwesomeIcon icon={faGears} /> &nbsp; Admin
+                </Button>
+              )}
             </NavLink>
           ),
           key: "1",
         },
         {
-          label: <button className="pay-btn-logout">Logout</button>,
+          label: (
+            <NavLink to="/bookinghistory">
+              <button className="pay-btn-logout">Booking History</button>
+            </NavLink>
+          ),
           key: "2",
+        },
+        {
+          label: <button className="pay-btn-logout">Logout</button>,
+          key: "3",
         },
       ]}
     />

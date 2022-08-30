@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "../style/room-list.scss";
-import "antd/dist/antd.css";
 import RoomItem from "./RoomItem";
 import { CustomerContext } from "../../../providers/CustomerContext";
 
@@ -12,13 +11,15 @@ function RoomListOption({ option }) {
   );
 
   return (
-    <div className="rooms">
-      {filterAvailableRooms.map((room) => (
-        <div key={room.id} className="room">
-          <RoomItem option={option} room={room} />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="rooms">
+        {filterAvailableRooms.map((room) => (
+          <div key={room.id} className="room">
+            <RoomItem option={option} room={room} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
